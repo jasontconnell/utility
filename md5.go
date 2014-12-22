@@ -7,6 +7,9 @@ import (
 
 func MD5(content []byte) string {
 	sum := md5.Sum(content)
-	//final := base64.URLEncoding.EncodeToString(sum)
 	return fmt.Sprintf("%x", sum)
+}
+
+func MD5s(content string) string {
+	return MD5([]byte(content))
 }
