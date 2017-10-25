@@ -15,3 +15,10 @@ func MakeKey(str string) string {
 	str = strings.ToLower(str)
 	return str
 }
+
+func HasString(list []string, find string) bool {
+	for _, i := range list {
+		if i == find { return true }
+	}
+	return false
+}
